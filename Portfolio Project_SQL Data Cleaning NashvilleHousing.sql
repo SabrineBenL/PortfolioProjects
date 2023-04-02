@@ -91,7 +91,6 @@ Add Ownersplitstate nvarchar(255)
 Update [dbo].[NashvilleHousing]
 Set Ownersplitstate=Parsename(replace(owneraddress,',','.') ,1)
 
-
 -- Change Y and N to Yes and No in "Sold as vacant" field
 Select distinct (SoldAsVacant), count(SoldAsVacant)
 from [dbo].[NashvilleHousing]
